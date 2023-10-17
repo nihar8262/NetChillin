@@ -26,7 +26,7 @@ export default function Cast ({cast,navigation}){
                               style={tw`mr-4 items-center`}
                               onPress={()=> navigation.navigate('Person',person)}
                             >   
-                                <View style={tw`overflow-hiddden items-center rounded-full h-20 w-20   border border-neutral-500`}>
+                                <View style={tw` items-center rounded-full h-20 w-20   border border-neutral-500`}>
                                     <Image 
                                     source={{uri: image185(person?.profile_path) || fallbackPersonImage}}
                                     //   source={require("../assets/image/ironman.jpg")}

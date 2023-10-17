@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "chillin",
+    "name": "NetChillin",
     "slug": "chillin",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/chillin.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/chillin.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#171717"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -24,7 +24,18 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon-32.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fa9cea00-4288-4899-8cb4-0f05f21fd3df"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fa9cea00-4288-4899-8cb4-0f05f21fd3df"
     }
   }
 }
