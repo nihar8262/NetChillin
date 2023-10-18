@@ -71,7 +71,7 @@ export default function MovieDesc() {
       {/* back button & movie poster */}
       <View style={tw`w-full`}>
         <SafeAreaView
-          style={tw` z-20 w-full flex-row justify-between items-center px-4 mt-3`}
+          style={tw`absolute z-20 w-full flex-row justify-between items-center px-4 mt-3`}
         >
           <TouchableOpacity
             onPress={() => navigation.goBack()}
@@ -94,7 +94,7 @@ export default function MovieDesc() {
                 <Image
                 source={{uri: image500(movie?.poster_path) || fallbackMoviePoster}}
                 //   source={require("../assets/image/avengers.jpg")}
-                  style={{ width, height: height * 0.55 ,marginTop:5,borderRadius:10}}
+                  style={{ width, height: height * 0.70 ,marginTop:5,borderRadius:10}}
                 />
       
                 <LinearGradient
