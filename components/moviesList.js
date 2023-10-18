@@ -44,7 +44,7 @@ export default function MoviesList({title,data,hideSeeAll}) {
                                 <Image 
                                  source={{uri: image185(item.poster_path) || fallbackMoviePoster}}
                                 //  source={require("../assets/image/avengers.jpg")}
-                                 style={{width:width*0.33,height:height*0.22}}
+                                 style={{width:width*0.33,height:height*0.22,borderRadius:20}}
                                 />
                                <Text style={tw`text-neutral-300 ml-1`}>
                                 {
