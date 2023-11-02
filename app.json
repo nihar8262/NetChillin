@@ -2,6 +2,7 @@
   "expo": {
     "name": "NetChillin",
     "slug": "chillin",
+    "plugins": ["@react-native-google-signin/google-signin"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/chillin.png",
@@ -15,13 +16,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nics8262.chillin"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#ffffff",
+        "googleServicesFile": "./google-services.json"
+
+      },
+      "package": "com.nics8262.chillin"
     },
     "web": {
       "favicon": "./assets/favicon-32.png"

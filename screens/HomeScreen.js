@@ -5,11 +5,12 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View,length
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
 import {
+  ArrowRightOnRectangleIcon,
   Bars3CenterLeftIcon,
   MagnifyingGlassIcon,
 } from "react-native-heroicons/outline";
@@ -20,15 +21,21 @@ import MoviesList from "../components/moviesList";
 import { useNavigation } from "@react-navigation/native";
 import Loading from "../components/loading";
 import { fetchTopRatedMovies, fetchTrendingMovies, fetchUpcomingMovies } from "../api/moivedb";
+import { signOut } from "firebase/auth";
+import { auth } from "../config/firebase";
 
 const android = Platform.OS == "android";
 
-export default function HomeScreen() {
+export default function HomeScreen(user) {
+
   const [trending, setTrending] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
   const [topRated, setTopRated] = useState([]);
   const [loader, setLoader] = useState(true);
   const navigation = useNavigation();
+  const handleLogout = async()=>{
+    await signOut(auth);
+  }
 
   useEffect(()=>{
     getTrendingMovies();
@@ -59,9 +66,15 @@ export default function HomeScreen() {
   return (
     <View style={tw`flex-1 bg-neutral-800`}>
       {/* Search & Logo */}
+      <StatusBar 
+       style="light" />
       <SafeAreaView style={tw`m-3`}>
         <View style={tw`flex-row justify-between items-center mx-4`}>
-          <Bars3CenterLeftIcon size="30" strokeWidth={2} color="white" />
+          {/* <Bars3CenterLeftIcon size="30" strokeWidth={2} color="white" /> */}
+          <TouchableOpacity onPress={handleLogout}>
+          <ArrowRightOnRectangleIcon size="30" strokeWidth={2} color="white"/>
+          </TouchableOpacity>
+          
           <Text style={tw`text-3xl text-white font-bold`}>
             <Text style={styles.text}>M</Text>
             ovies

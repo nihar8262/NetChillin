@@ -12,7 +12,6 @@ import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
 import UseAuth from '../hooks/useAuth';
 import drawerScreen from '../screens/drawerScreen';
-import otpScreen from '../screens/otpScreen';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -25,29 +24,14 @@ export default function AppNaviagtion() {
       
     
       <NavigationContainer>
-        
-          <Stack.Navigator initialRouteName='home' screenOptions={{headerShown:false}}>
-              <Stack.Screen name='home' component={HomeScreen} user={user}/>
-              <Stack.Screen name='Movie' component={MovieDesc}/>
-              <Stack.Screen name='Person' component={Person}/>
-              <Stack.Screen name='Search' component={Search}/>
-          </Stack.Navigator>
+        <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="drawer" component={drawerScreen} />
+      </Drawer.Navigator>
+          
       </NavigationContainer>
     );
   }
-  else{
-    return (
-    
-      <NavigationContainer>
-          <Stack.Navigator initialRouteName='signup' screenOptions={{headerShown:false}}>
-              
-              <Stack.Screen name='login' component={LoginScreen}/>
-              <Stack.Screen name='otp' component={otpScreen}/>
-              <Stack.Screen name='signup' component={SignupScreen}/>
-              
-          </Stack.Navigator>
-      </NavigationContainer>
-    );
-  }
+ 
  
 }

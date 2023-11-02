@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "296188696271",
+    "project_id": "netchillin-1d17c",
+    "storage_bucket": "netchillin-1d17c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296188696271:android:52a2d315e9fa08b22709ba",
+        "android_client_info": {
+          "package_name": "com.nics8262.chillin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296188696271-9a5ob5dfsmeq3tktm8p1oj33douf2pag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nics8262.chillin",
+            "certificate_hash": "9b85ebdea346918706398d5e113ea92e130bfa75"
+          }
+        },
+        {
+          "client_id": "296188696271-jaqeva5cbdn7reqltlshhsfg7sk4pltl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nics8262.chillin",
+            "certificate_hash": "be4b7d85468294bb53752e5e8affff26630537ed"
+          }
+        },
+        {
+          "client_id": "296188696271-0i5ej8cb287bnaa11jgvodboc1kme4nr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnv6zSPbDJejQ2iaHpIXVpzrA-LawJASk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296188696271-0i5ej8cb287bnaa11jgvodboc1kme4nr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

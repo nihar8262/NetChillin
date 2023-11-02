@@ -21,6 +21,7 @@ import MoviesList from "../components/moviesList";
 import Loading from "../components/loading";
 import { fallbackMoviePoster, image185, searchMovies } from "../api/moivedb";
 import {debounce} from 'lodash';
+import LottieView from "lottie-react-native";
 
 const { width, height } = Dimensions.get("window");
 
@@ -112,12 +113,14 @@ export default function Search() {
               </View>
             </ScrollView>
           ) : (
-            <View style={tw`flex-row  justify-center`}>
-              <Image
-                style={tw`h-75 w-90 `}
-                source={require("../assets/image/sheep.png")}
-              />
-              
+            <View style={tw`flex-row  justify-center mt-30`}>
+               
+                  <LottieView style={{width: width * 0.9,height: width,}}
+                    source={require('../assets/image/searching.json')}
+                    autoPlay
+                    loop
+                  />
+                
             </View>
             
           )
@@ -128,3 +131,5 @@ export default function Search() {
     </SafeAreaView>
   );
 }
+
+
