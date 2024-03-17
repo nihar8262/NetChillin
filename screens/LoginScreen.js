@@ -16,6 +16,7 @@ import Animated, {
   FadeInUp,
   FadeInDown,
 } from "react-native-reanimated";
+import { Feather } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
@@ -25,6 +26,7 @@ export default function LoginScreen() {
   const navigation = useNavigation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async () => {
     if (email && password) {
@@ -90,15 +92,26 @@ export default function LoginScreen() {
 
           <Animated.View
             entering={FadeInDown.delay(200).duration(1000).springify()}
-            style={tw`bg-white/50 p-5 rounded-2xl w-full mb-5`}
+            style={tw`bg-white/50 p-5 relative rounded-2xl w-full mb-5`}
           >
             <TextInput
               value={password}
               onChangeText={(value) => setPassword(value)}
               placeholder="Password"
               placeholderTextColor={"black"}
-              secureTextEntry
+              secureTextEntry={!showPassword}
             />
+            <TouchableOpacity
+              onPress={() => setShowPassword(!showPassword)}
+              style={tw`absolute right-5 top-6`}
+            >
+                {
+                    showPassword? 
+                    <Feather name="eye" size={20} color="black" />
+                    :
+                    <Feather name="eye-off" size={20} color="black" />
+                }
+            </TouchableOpacity>
           </Animated.View>
           {/* button */}
           <Animated.View
