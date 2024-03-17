@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "NetChillin",
+    "slug": "chillin",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/chillin.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/chillin.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#171717"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon-32.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fa9cea00-4288-4899-8cb4-0f05f21fd3df"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fa9cea00-4288-4899-8cb4-0f05f21fd3df"
+    }
+  }
+}
